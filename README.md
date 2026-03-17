@@ -105,9 +105,7 @@ Models were evaluated using:
 These metrics help measure how well the models predict injury outcomes.
 
 ------------------------------------------------------------------------
-
-## Results
-
+![alt text](image.png)
 The performance of the models was compared using accuracy scores.
 
 The comparison helps determine which model performs better in predicting
@@ -116,7 +114,6 @@ injury-related crashes.
 ------------------------------------------------------------------------
 
 ## Key Insights
-![C:\Users\Dell\Documents\flatiron\DataScience\Phase_3\phase-3-project\Chicago-Traffic-Crash-Prediction-and-Analysis\Images](strongpredictors.png)
 
 The analysis helps identify:
 
