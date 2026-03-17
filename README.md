@@ -1,5 +1,5 @@
 # Chicago-car-Crash-Prediction-and-Analysis
-![Chicagocarcrash](C:\Users\Dell\Documents\flatiron\DataScience\Phase_3\phase-3-project\Chicago-Traffic-Crash-Prediction-and-Analysis\Images)
+![Chicagocarcrash](C:/Users/Dell/Documents/flatiron/DataScience/Phase_3/phase-3-project/Chicago-Traffic-Crash-Prediction-and-Analysis/Images)
 
 ## BUSINESS UNDERSTANDING
 ## Problem Statement
