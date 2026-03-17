@@ -116,7 +116,7 @@ injury-related crashes.
 ------------------------------------------------------------------------
 
 ## Key Insights
-![alt text](image.png)
+![C:\Users\Dell\Documents\flatiron\DataScience\Phase_3\phase-3-project\Chicago-Traffic-Crash-Prediction-and-Analysis\Images](strongpredictors.png)
 
 The analysis helps identify:
 
