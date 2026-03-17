@@ -1,4 +1,5 @@
 # Chicago-car-Crash-Prediction-and-Analysis
+![view-chicago-traffic-rush-hour-afternoon-282786158](https://github.com/user-attachments/assets/6a30ec49-1dba-40e0-8762-c9bec42dd6dc)
 
 ## BUSINESS UNDERSTANDING
 ## Problem Statement
