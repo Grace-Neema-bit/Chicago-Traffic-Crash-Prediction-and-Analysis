@@ -1,6 +1,5 @@
 # Chicago-car-Crash-Prediction-and-Analysis
-![Chicagocarcrash](C:/Users/Dell/Documents/flatiron/DataScience/Phase_3/phase-3-project/Chicago-Traffic-Crash-Prediction-and-Analysis/Images)
-
+![images/view-chicago-traffic-rush-hour-afternoon-282786158]
 ## BUSINESS UNDERSTANDING
 ## Problem Statement
 Traffic accidents are a major concern in Chicago. Understanding the conditions that lead to severe crashes will help the Vehicle safety board.
@@ -117,6 +116,7 @@ injury-related crashes.
 ------------------------------------------------------------------------
 
 ## Key Insights
+![alt text](image.png)
 
 The analysis helps identify:
 
