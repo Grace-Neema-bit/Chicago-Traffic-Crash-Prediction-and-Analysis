@@ -1,5 +1,5 @@
 # Chicago-car-Crash-Prediction-and-Analysis
-![images/view-chicago-traffic-rush-hour-afternoon-282786158]
+
 ## BUSINESS UNDERSTANDING
 ## Problem Statement
 Traffic accidents are a major concern in Chicago. Understanding the conditions that lead to severe crashes will help the Vehicle safety board.
