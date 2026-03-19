@@ -29,7 +29,14 @@ The dataset we are using has been obtained from kaggle, it contains car crashes 
 The project follows the **standard data science workflow:**
 
 1.  Business Understanding
+The aim is to help stakeholders such as city planners and vehicle safety authorities identify patterns in crashes and implement strategies to reduce accidents.
+
 2.  Data Understanding
+
+* Loaded dataset and examined structure using:
+
+  * `df.shape`, `df.info()`, `df.describe()`
+* Checked missing values and class distribution
 3.  Data Preparation
 4.  Modeling
 5.  Evaluation
@@ -43,32 +50,44 @@ Several preprocessing steps were performed before training the models:
 
 -   Cleaning missing values
 -   Mapping injury values to numeric format
--   Creating a binary target variable (`crash_severity_class`)
+-   Creating a binary target variable (contributory_cause`)
 -   Feature engineering from crash dates
 -   One-hot encoding categorical variables
 -   Selecting relevant model features
 -   Standardizing numerical variables using StandardScaler
 
-Target Variable:
+Target Variable:THis is a multiple classification model so we used the 
 
-`crash_severity_class` - 1 = crash resulted in injuries - 0 = crash resulted
-in no injuries
+`contributory_cause` as our target variable
+Due to class imbalance, the number of categories was reduced to the most frequent classes, with others grouped into an **“Other”** category.
 
 ------------------------------------------------------------------------
+
+ Exploratory Data Analysis (EDA)
+
+Visualizations were used to understand patterns
+
 
 ## Feature Selection
 
 The following features were selected for modeling:
 
--    windspeed
--    winddir
--    pressure
--    visibility
--    cloudcover
--    moonphase
--    lattitude
--    days_temp
--    num_vehicles_in_crash
+windspeed                
+winddir                  
+pressure                 
+visibility               
+cloudcover               
+moonphase                
+lattitude                
+days_temp                
+num_vehicles_in_crash    
+longitude                
+days_feelslike           
+dew                      
+precip                   
+precipprob               
+contributory_cause       
+dtype: int64
 
 These features represent environmental conditions and crash
 characteristics that may influence injury outcomes.
@@ -84,10 +103,12 @@ Two machine learning models were used in this project:
 Logistic Regression was used as the baseline classifier. It provides a
 simple and interpretable model for binary classification problems.
 
-### 2. Decision Tree Classifier
+### 2. Random forest
+Random Forest is the best because it solves two major problems:
 
-A Decision Tree model was used as the second model to capture more
-complex relationships between variables.
+Prevents Overfitting: A single tree might "memorize" your training data, leading to 100% accuracy on old data but 0% on new data. By averaging many trees, the Random Forest cancels out individual errors.
+
+Handles "Messy" Data: It doesn't care if your weather data hasn't been scaled or if there are non-linear relationships (e.g., crashes don't just increase as it gets colder; they spike specifically at the freezing point of 0°C).
 
 ------------------------------------------------------------------------
 ## Process
@@ -95,13 +116,17 @@ complex relationships between variables.
 -   Feature scaling
 -   Cross_validation
 ## Model Evaluation
-
+  
 Models were evaluated using:
 
 -   Accuracy Score
 -   Confusion Matrix
 -   ROC_AUC
 -   Classification Report (Precision, Recall, F1-score)
+
+* **Pipelines** for cleaner workflow
+* **Ensemble (Voting Classifier)** to combine models
+
 
 These metrics help measure how well the models predict injury outcomes.
 
@@ -124,6 +149,22 @@ The analysis helps identify:
 
 These insights can help authorities implement preventative measures to improve road safety.
 
+### Feature Importance
+
+* Extracted from Random Forest model
+* Identified key drivers of crash causes such as:
+
+  * Road conditions
+  * Weather conditions
+  * Traffic control devices
+
+## Future Improvements
+
+* Apply advanced models (e.g., XGBoost, Gradient Boosting)
+* Improve feature engineering (time-based, location clustering)
+* Use hyperparameter tuning for better performance
+* Deploy model as a real-world application
+
 ------------------------------------------------------------------------
 
 ## Recommendations
@@ -139,3 +180,10 @@ These insights can help authorities implement preventative measures to improve r
 
 While a standard model prioritizes on accuracy, we optimized for recall. The model reveals thst the more the cars at in interserctions the higher the impact of accidents.
 The city should focus on multi vehicle intersections within the high risk lattitude and the allocate resources where they will have immediate impact on saving lives
+
+
+---
+
+
+
+
